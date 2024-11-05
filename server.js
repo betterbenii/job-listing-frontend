@@ -2,31 +2,41 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from "html", "css", and "assets" directories
-app.use(express.static(path.join(__dirname, 'html')));
+// Serve static files from the "css" and "assets" directories
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-// Route for index (home) page
+// Root route ("/") to serve index.html directly at the root
 app.get('/', (req, res) => {
+ 
   res.sendFile(path.join(__dirname, 'html', 'index.html'));
 });
 
 // Route for job listings page
-app.get('/job-listings', (req, res) => {
+app.get('/job-listings.html', (req, res) => {
+ 
   res.sendFile(path.join(__dirname, 'html', 'job-listings.html'));
 });
 
 // Route for login page
-app.get('/login', (req, res) => {
+app.get('/login.html', (req, res) => {
+  
   res.sendFile(path.join(__dirname, 'html', 'login.html'));
 });
 
 // Route for signup page
-app.get('/signup', (req, res) => {
+app.get('/signup.html', (req, res) => {
+ 
   res.sendFile(path.join(__dirname, 'html', 'signup.html'));
 });
 
+// Wildcard route to catch all other requests and display a 404 message
+app.get('*', (req, res) => {
+  
+  res.status(404).send('Page not found');
+});
+
+// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
