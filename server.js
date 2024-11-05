@@ -2,9 +2,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from the "html" and "css" directories
+// Serve static files from "html", "css", and "assets" directories
 app.use(express.static(path.join(__dirname, 'html')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+
+// Route for index (home) page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'index.html'));
+});
 
 // Route for job listings page
 app.get('/job-listings', (req, res) => {
@@ -20,14 +26,6 @@ app.get('/login', (req, res) => {
 app.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'signup.html'));
 });
-
-// Default route for the home page
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'html', 'index.html'));
-});
-
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
-
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
