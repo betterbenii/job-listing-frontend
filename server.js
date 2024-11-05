@@ -6,6 +6,11 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'html')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 
+// Route for job listings page
+app.get('/job-listings', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'job-listings.html'));
+});
+
 // Route for login page
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'login.html'));
@@ -16,7 +21,7 @@ app.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'signup.html'));
 });
 
-// Default route
+// Default route for the home page
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'index.html'));
 });

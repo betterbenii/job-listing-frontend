@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800">Job Listings</h1>
+        <nav>
+          <a href="login.html" class="text-gray-600 hover:text-indigo-500">Login</a>
+          <a href="signup.html" class="ml-4 text-gray-600 hover:text-indigo-500">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+  
+    <main class="container mx-auto px-4 py-8">
+      <!-- Search and Filter Section -->
+      <div class="mb-6">
+        <input type="text" placeholder="Search by job title, company, or location" 
+               class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      </div>
+  
+      <!-- Job Listings -->
+      <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        <!-- Job Card Example -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-xl font-semibold text-gray-800">Frontend Developer</h2>
+          <p class="text-sm text-gray-600">Company: ABC Corp</p>
+          <p class="text-sm text-gray-600">Location: Addis Ababa</p>
+          <p class="mt-2 text-gray-700">We are looking for a skilled frontend developer to join our team...</p>
+          <a href="job-detail.html" class="inline-block mt-4 text-indigo-600 hover:underline">View Details</a>
+        </div>
+  
+        <!-- Repeat Job Card Structure for Additional Jobs -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-xl font-semibold text-gray-800">Backend Developer</h2>
+          <p class="text-sm text-gray-600">Company: XYZ Ltd</p>
+          <p class="text-sm text-gray-600">Location: Nairobi</p>
+          <p class="mt-2 text-gray-700">We are seeking a backend developer with experience in Node.js and MongoDB...</p>
+          <a href="job-detail.html" class="inline-block mt-4 text-indigo-600 hover:underline">View Details</a>
+        </div>
+      </div>
+    </main>
+  </body>
+  
