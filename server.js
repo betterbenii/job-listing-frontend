@@ -31,6 +31,11 @@ app.get('/job-detail.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'job-detail.html'));
 });
 
+// Route for add job page
+app.get('/add-job.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'add-job.html'));
+});
+
 // Wildcard route to catch all other requests and display a 404 message
 app.get('*', (req, res) => {
   res.status(404).send('Page not found');
