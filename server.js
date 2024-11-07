@@ -8,31 +8,31 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 // Root route ("/") to serve index.html directly at the root
 app.get('/', (req, res) => {
- 
   res.sendFile(path.join(__dirname, 'html', 'index.html'));
 });
 
 // Route for job listings page
 app.get('/job-listings.html', (req, res) => {
- 
   res.sendFile(path.join(__dirname, 'html', 'job-listings.html'));
 });
 
 // Route for login page
 app.get('/login.html', (req, res) => {
-  
   res.sendFile(path.join(__dirname, 'html', 'login.html'));
 });
 
 // Route for signup page
 app.get('/signup.html', (req, res) => {
- 
   res.sendFile(path.join(__dirname, 'html', 'signup.html'));
+});
+
+// Route for job detail page
+app.get('/job-detail.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'job-detail.html'));
 });
 
 // Wildcard route to catch all other requests and display a 404 message
 app.get('*', (req, res) => {
-  
   res.status(404).send('Page not found');
 });
 
