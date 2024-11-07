@@ -46,9 +46,9 @@ app.get('/view-applications.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'view-applications.html'));
 });
 
-// Wildcard route to catch all other requests and display a 404 message
+// Wildcard route to catch all other requests and display the 404 page
 app.get('*', (req, res) => {
-  res.status(404).send('Page not found');
+  res.status(404).sendFile(path.join(__dirname, 'html', '404.html'));
 });
 
 // Start the server
