@@ -9,45 +9,45 @@
 </head>
 <body class="bg-tea_green-100">
 
-  <!-- Header -->
-  <header class="bg-asparagus shadow sticky top-0 z-10">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="/" class="text-xl sm:text-2xl font-bold text-light_green">Job Portal</a>
+ <!-- Header -->
+<header class="bg-asparagus shadow sticky top-0 z-10">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-xl sm:text-2xl font-bold text-light_green">Job Portal</a>
 
-      <!-- Hamburger Menu for Mobile -->
-      <button id="menu-toggle" class="block md:hidden text-light_green focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+    <!-- Hamburger Menu for Mobile -->
+    <button id="menu-toggle" class="block md:hidden text-light_green focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
 
-      <!-- Navigation Links -->
-      <nav id="menu" class="hidden md:flex items-center space-x-4">
-        <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
-        <a href="#about" class="text-tea_green hover:text-olivine">About</a>
-        <a href="#privacy" class="text-tea_green hover:text-olivine">Privacy</a>
-        <a href="#contact" class="text-tea_green hover:text-olivine">Contact</a>
-        <a href="#faq" class="text-tea_green hover:text-olivine">FAQ</a>
-      </nav>
-
-      <!-- Sign Up & Login Buttons -->
-      <div class="hidden md:flex space-x-2">
-        <a href="/signup.html" class="px-3 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus text-xs sm:text-sm md:text-base">Sign Up</a>
-        <a href="/login.html" class="px-3 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus text-xs sm:text-sm md:text-base">Login</a>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-4 px-4">
+    <!-- Navigation Links -->
+    <nav id="menu" class="hidden md:flex items-center space-x-4">
       <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
       <a href="#about" class="text-tea_green hover:text-olivine">About</a>
       <a href="#privacy" class="text-tea_green hover:text-olivine">Privacy</a>
       <a href="#contact" class="text-tea_green hover:text-olivine">Contact</a>
       <a href="#faq" class="text-tea_green hover:text-olivine">FAQ</a>
-      <a href="/signup.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Sign Up</a>
-      <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Login</a>
+    </nav>
+
+    <!-- Sign Up & Login Buttons -->
+    <div class="hidden md:flex space-x-2">
+      <a href="/signup.html" class="px-3 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Sign Up</a>
+      <a href="/login.html" class="px-3 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Login</a>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 mt-4 px-4 bg-asparagus text-light_green w-full">
+    <a href="/job-listings.html" class="py-2 hover:bg-olivine">Jobs</a>
+    <a href="#about" class="py-2 hover:bg-olivine">About</a>
+    <a href="#privacy" class="py-2 hover:bg-olivine">Privacy</a>
+    <a href="#contact" class="py-2 hover:bg-olivine">Contact</a>
+    <a href="#faq" class="py-2 hover:bg-olivine">FAQ</a>
+    <a href="/signup.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Sign Up</a>
+    <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Login</a>
+  </div>
+</header>
 
   <!-- Applications Section -->
   <main class="container mx-auto px-4 py-12">
@@ -96,13 +96,19 @@
   </footer>
 
   <script>
-    // Toggle Mobile Menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+     const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close mobile menu on window resize if it's open
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
   </script>
 </body>
 </html>
