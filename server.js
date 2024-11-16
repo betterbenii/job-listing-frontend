@@ -46,9 +46,14 @@ app.get('/view-applications.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'view-applications.html'));
 });
 
-// Route for candidate profile page
+// Route for candidate profile view page
 app.get('/candidate-profile.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'candidate-profile.html'));
+});
+
+// Route for edit candidate profile page
+app.get('/edit-candidate-profile.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'edit-candidate-profile.html'));
 });
 
 // Wildcard route to catch all other requests and display the 404 page
