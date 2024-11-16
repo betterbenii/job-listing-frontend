@@ -1036,6 +1036,16 @@ video {
   color: rgb(98 148 96 / var(--tw-text-opacity));
 }
 
+.text-asparagus-100 {
+  --tw-text-opacity: 1;
+  color: rgb(20 30 19 / var(--tw-text-opacity));
+}
+
+.text-asparagus-200 {
+  --tw-text-opacity: 1;
+  color: rgb(39 59 39 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
