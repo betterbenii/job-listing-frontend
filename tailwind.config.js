@@ -2,6 +2,9 @@ module.exports = {
   content: ["./html/**/*.html"],
   theme: {
     extend: {
+      fontFamily:{
+        sans: 'Poppins, sans-serif'
+      },
       colors: {
         night: {
           DEFAULT: '#000f08',
