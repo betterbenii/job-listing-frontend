@@ -7,53 +7,92 @@
   <link rel="stylesheet" href="/css/output.css">
 </head>
 <body class="bg-white">
-    <header class="bg-asparagus shadow">
-      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold text-light_green">Job Portal</a>
-        <nav>
-          <div class="space-x-2">
-            <a href="/signup.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Sign Up</a>
-            <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Login</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-  
-    <main class="container mx-auto px-4 py-8">
-      <!-- Search and Filter Section -->
-      <div class="flex items-center mb-6 space-x-2">
-        <input type="text" placeholder="Search by job title, company, or location" 
-               class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-asparagus">
-        <button class="px-4 py-2 bg-asparagus text-white font-semibold rounded-md hover:bg-olivine focus:outline-none">
-          Search
-        </button>
-      </div>
-  
-      <!-- Job Listings -->
-      <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-        <!-- Job Card Example -->
-        <div class="bg-tea_green p-6 rounded-lg shadow-md relative">
-          <h2 class="text-xl font-semibold  text-asparagus-100">Frontend Developer</h2>
-          <p class="text-sm text-asparagus-200">Company: ABC Corp</p>
-          <p class="text-sm text-asparagus-200">Location: Addis Ababa</p>
-          <p class="mt-2 text-asparagus-100">We are looking for a skilled frontend developer to join our team...</p>
-          <a href="job-detail.html" class="inline-block mt-4 text-asparagus-100 hover:underline">View Details</a>
-          
-          <!-- Bookmark Button -->
-          <button class="absolute bottom-4 right-4 text-olivine hover:text-asparagus" onclick="bookmarkJob()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5v16l7-5 7 5V5z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </main>
 
-    <!-- JavaScript for Bookmark Functionality -->
-    <script>
-      function bookmarkJob() {
-        alert("Job bookmarked!"); // Placeholder for actual bookmarking logic
-      }
-    </script>
+<!-- Header -->
+<header class="bg-asparagus shadow sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <a href="/" class="text-2xl font-bold text-light_green">Job Portal</a>
+    
+    <!-- Hamburger Menu Button -->
+    <button id="menu-toggle" class="block md:hidden text-light_green focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    
+    <!-- Desktop Navigation Links -->
+    <nav id="menu" class="hidden md:flex space-x-6">
+      <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
+      <a href="#about" class="text-tea_green hover:text-olivine">About</a>
+      <a href="#privacy" class="text-tea_green hover:text-olivine">Privacy</a>
+      <a href="#contact" class="text-tea_green hover:text-olivine">Contact</a>
+      <a href="#faq" class="text-tea_green hover:text-olivine">FAQ</a>
+    </nav>
+
+    <!-- Sign Up & Login Buttons for Desktop -->
+    <div class="hidden md:flex space-x-4">
+      <a href="/signup.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-asparagus">Sign Up</a>
+      <a href="/login.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-asparagus">Login</a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-asparagus flex flex-col items-center p-4 space-y-3">
+    <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
+    <a href="#about" class="text-tea_green hover:text-olivine">About</a>
+    <a href="#privacy" class="text-tea_green hover:text-olivine">Privacy</a>
+    <a href="#contact" class="text-tea_green hover:text-olivine">Contact</a>
+    <a href="#faq" class="text-tea_green hover:text-olivine">FAQ</a>
+    <a href="/signup.html" class="block w-full text-center px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Sign Up</a>
+    <a href="/login.html" class="block w-full text-center px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Login</a>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+  <!-- Search and Filter Section -->
+  <div class="flex items-center mb-6 space-x-2">
+    <input type="text" placeholder="Search by job title, company, or location" 
+           class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-asparagus">
+    <button class="px-4 py-2 bg-asparagus text-white font-semibold rounded-md hover:bg-olivine focus:outline-none">
+      Search
+    </button>
+  </div>
+
+  <!-- Job Listings -->
+  <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+    <!-- Job Card Example -->
+    <div class="bg-tea_green p-6 rounded-lg shadow-md relative">
+      <h2 class="text-xl font-semibold text-asparagus-100">Frontend Developer</h2>
+      <p class="text-sm text-asparagus-200">Company: ABC Corp</p>
+      <p class="text-sm text-asparagus-200">Location: Addis Ababa</p>
+      <p class="mt-2 text-asparagus-100">We are looking for a skilled frontend developer to join our team...</p>
+      <a href="job-detail.html" class="inline-block mt-4 text-asparagus-100 hover:underline">View Details</a>
+
+      <!-- Bookmark Button -->
+      <button class="absolute bottom-4 right-4 text-olivine hover:text-asparagus" onclick="bookmarkJob()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5v16l7-5 7 5V5z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</main>
+
+<!-- JavaScript -->
+<script>
+  function bookmarkJob() {
+    alert("Job bookmarked!");
+  }
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 </body>
 </html>
