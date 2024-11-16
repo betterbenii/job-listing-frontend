@@ -7,23 +7,35 @@
   <link rel="stylesheet" href="/css/output.css">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="bg-tea_green-100">
+<body class="bg-tea_green-100 w-full min-h-screen">
 
   <!-- Header -->
-  <header class="bg-asparagus shadow sticky top-0 z-10">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold text-light_green">Job Portal</a>
-      <nav class="hidden md:flex items-center space-x-4">
+  <header class="bg-asparagus shadow sticky top-0 z-10 w-full">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center w-full">
+      <a href="/index.html" class="text-2xl font-bold text-light_green">Job Portal</a>
+      <!-- Responsive Navigation -->
+      <nav class="hidden lg:flex items-center space-x-4">
         <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
-        <a href="/dashboard.html" class="text-tea_green hover:text-olivine">Dashboard</a>
+        <a href="/recruiter-dashboard.html" class="text-tea_green hover:text-olivine">Dashboard</a>
         <a href="#about" class="text-tea_green hover:text-olivine">About</a>
       </nav>
-      <a href="/" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">Logout</a>
+      <a href="/" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green hidden lg:block">Logout</a>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu" class="lg:hidden text-tea_green">
+        ☰
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="hidden lg:hidden bg-tea_green-100 p-4">
+      <a href="/job-listings.html" class="block py-2 text-tea_green hover:text-olivine">Jobs</a>
+      <a href="/dashboard.html" class="block py-2 text-tea_green hover:text-olivine">Dashboard</a>
+      <a href="#about" class="block py-2 text-tea_green hover:text-olivine">About</a>
+      <a href="/" class="block py-2   text-tea_green hover:text-red-500 rounded">Logout</a>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="container mx-auto px-4 py-12">
+  <main class="container mx-auto px-4 py-12 w-full">
     <!-- Dashboard Header -->
     <section class="mb-12 text-center">
       <h2 class="text-3xl font-bold text-asparagus mb-4">Recruiter Dashboard</h2>
@@ -32,16 +44,16 @@
 
     <!-- Add Job Button -->
     <div class="text-right mb-6">
-      <button onclick="location.href='/add-job.html'" class="px-6 py-3 bg-olivine text-white font-semibold rounded hover:bg-light_green shadow-lg">
+      <button onclick="location.href='/add-job.html'" class="w-full sm:w-auto px-6 py-3 bg-olivine text-white font-semibold rounded hover:bg-light_green shadow-lg">
         Add New Job
       </button>
     </div>
 
     <!-- Job Listings Table -->
-    <section class="bg-white p-8 rounded-lg shadow-lg">
+    <section class="bg-white p-8 rounded-lg shadow-lg overflow-x-auto w-full">
       <h3 class="text-2xl font-bold text-asparagus mb-8">All Job Listings</h3>
-      <div class="overflow-x-auto">
-        <table class="min-w-full table-auto">
+      <div class="overflow-x-auto w-full">
+        <table class="min-w-full table-auto border-collapse w-full">
           <thead>
             <tr class="bg-asparagus text-white">
               <th class="p-4 text-left">Job Title</th>
@@ -51,7 +63,6 @@
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
-            <!-- Example Job Row -->
             <tr class="hover:bg-gray-100">
               <td class="p-4">Frontend Developer</td>
               <td class="p-4">Addis Ababa</td>
@@ -73,7 +84,6 @@
                 </button>
               </td>
             </tr>
-            <!-- Repeat for each job listing -->
           </tbody>
         </table>
       </div>
@@ -81,9 +91,17 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-asparagus py-6 text-center">
+  <footer class="bg-asparagus py-6 text-center w-full">
     <p class="text-white">&copy; 2024 Job Portal. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('mobile-menu');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuButton.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>

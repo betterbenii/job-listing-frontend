@@ -12,7 +12,7 @@
   <!-- Header -->
   <header class="bg-asparagus shadow">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold text-light_green">Job Portal</a>
+      <a href="/index.html" class="text-2xl font-bold text-light_green">Job Portal</a>
       <nav class="hidden md:flex items-center space-x-4">
         <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
         <a href="#about" class="text-tea_green hover:text-olivine">About</a>
@@ -34,30 +34,41 @@
       <p class="text-gray-700">Here are the profiles of candidates who applied for this position.</p>
     </section>
 
-    <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Candidate Profile Card Example -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-gray-800">John Doe</h3>
-        <p class="text-gray-600">Experience: 5 years in frontend development</p>
-        <p class="mt-2 text-gray-700">Proficient in React, JavaScript, and CSS with a passion for creating interactive web applications...</p>
-        <div class="mt-4 flex space-x-2">
-          <a href="#" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">View Profile</a>
-          <a href="#" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">Download Resume</a>
+    <!-- Candidate Profiles Section -->
+    <section class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Candidate Profile Card -->
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">John Doe</h3>
+          <p class="text-gray-600">Experience: 5 years in frontend development</p>
+          <p class="mt-2 text-gray-700">Proficient in React, JavaScript, and CSS with a passion for creating interactive web applications...</p>
+        </div>
+        <div class="mt-4 flex flex-col sm:flex-row gap-2">
+          <button onclick="location.href='/candidate-profile.html'" class="w-full sm:w-auto px-4 py-2 bg-tea_green text-white rounded hover:bg-olivine shadow-md">
+            View Profile
+          </button>
+          <button onclick="location.href='#'" class="w-full sm:w-auto px-4 py-2 bg-asparagus text-white rounded hover:bg-light_green shadow-md">
+            Download Resume
+          </button>
         </div>
       </div>
 
-      <!-- Additional Candidate Cards -->
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold text-gray-800">Jane Smith</h3>
-        <p class="text-gray-600">Experience: 3 years in UI/UX design</p>
-        <p class="mt-2 text-gray-700">Experienced in Figma, Adobe XD, and front-end development with a focus on user-centered design...</p>
-        <div class="mt-4 flex space-x-2">
-          <a href="#" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">View Profile</a>
-          <a href="#" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">Download Resume</a>
+      <!-- Additional Candidate Card -->
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">Jane Smith</h3>
+          <p class="text-gray-600">Experience: 3 years in UI/UX design</p>
+          <p class="mt-2 text-gray-700">Experienced in Figma, Adobe XD, and front-end development with a focus on user-centered design...</p>
+        </div>
+        <div class="mt-4 flex flex-col sm:flex-row gap-2">
+          <button onclick="location.href='/candidate-profile.html'" class="w-full sm:w-auto px-4 py-2 bg-tea_green text-white rounded hover:bg-olivine shadow-md">
+            View Profile
+          </button>
+          <button onclick="location.href='#'" class="w-full sm:w-auto px-4 py-2 bg-asparagus text-white rounded hover:bg-light_green shadow-md">
+            Download Resume
+          </button>
         </div>
       </div>
-      
-      <!-- Repeat as needed for more candidates -->
     </section>
   </main>
 
