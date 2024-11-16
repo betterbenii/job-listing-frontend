@@ -127,3 +127,29 @@ body {
     text-align: center;
   }
   
+  /* Responsive Button Styling */
+@media (max-width: 768px) {
+  .flex-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .table-auto {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Hover Effects */
+.table-auto tbody tr:hover {
+  background-color: #f4fcf3; /* Slight green highlight */
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}

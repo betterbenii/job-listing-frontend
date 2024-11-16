@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiter Dashboard</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-tea_green-100">
+
+  <!-- Header -->
+  <header class="bg-asparagus shadow sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/index.html" class="text-2xl font-bold text-light_green">Job Portal</a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
+        <a href="/dashboard.html" class="text-tea_green hover:text-olivine">Dashboard</a>
+        <a href="#about" class="text-tea_green hover:text-olivine">About</a>
+      </nav>
+      <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">Logout</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <!-- Dashboard Header -->
+    <section class="mb-12 text-center">
+      <h2 class="text-3xl font-bold text-asparagus mb-4">Recruiter Dashboard</h2>
+      <p class="text-gray-700">Manage all job postings and applications</p>
+    </section>
+
+    <!-- Add Job Button -->
+    <div class="text-right mb-6">
+      <button onclick="location.href='/add-job.html'" class="px-6 py-3 bg-olivine text-white font-semibold rounded hover:bg-light_green shadow-lg">
+        Add New Job
+      </button>
+    </div>
+
+    <!-- Job Listings Table -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold text-asparagus mb-8">All Job Listings</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto">
+          <thead>
+            <tr class="bg-asparagus text-white">
+              <th class="p-4 text-left">Job Title</th>
+              <th class="p-4 text-left">Location</th>
+              <th class="p-4 text-left">Recruiter</th>
+              <th class="p-4 text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <!-- Example Job Row -->
+            <tr class="hover:bg-gray-100">
+              <td class="p-4">Frontend Developer</td>
+              <td class="p-4">Addis Ababa</td>
+              <td class="p-4">
+                <a href="/recruiter-profile.html" class="text-olivine hover:underline">John Doe</a>
+              </td>
+              <td class="p-4 text-center flex justify-center items-center gap-2 flex-wrap">
+                <!-- Edit Job Button -->
+                <button onclick="location.href='/edit-job.html'" class="px-4 py-2 bg-tea_green text-white rounded hover:bg-olivine shadow-md">
+                  Edit
+                </button>
+                <!-- View Applications Button -->
+                <button onclick="location.href='/view-applications.html'" class="px-4 py-2 bg-asparagus text-white rounded hover:bg-light_green shadow-md">
+                  View Apps
+                </button>
+                <!-- Delete Button -->
+                <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 shadow-md">
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <!-- Repeat for each job listing -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-asparagus py-6 text-center">
+    <p class="text-white">&copy; 2024 Job Portal. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
