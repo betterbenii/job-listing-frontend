@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Recruiter Profile</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-tea_green-100">
+
+  <!-- Header -->
+  <header class="bg-asparagus shadow sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/index.html" class="text-2xl font-bold text-light_green">Job Portal</a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
+        <a href="/dashboard.html" class="text-tea_green hover:text-olivine">Dashboard</a>
+        <a href="#about" class="text-tea_green hover:text-olivine">About</a>
+      </nav>
+      <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">Logout</a>
+    </div>
+  </header>
+
+  <!-- Edit Profile Section -->
+  <main class="container mx-auto px-4 py-12">
+    <section class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold text-asparagus mb-8">Edit Profile</h2>
+      <form class="space-y-6">
+        <!-- Full Name -->
+        <div>
+          <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+          <input type="text" id="full-name" name="full-name" value="Jane Smith" class="w-full px-4 py-2 mt-1 bg-gray-200 border rounded focus:outline-none focus:ring-2 focus:ring-olivine">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" value="jane.smith@example.com" class="w-full px-4 py-2 mt-1 bg-gray-200 border rounded focus:outline-none focus:ring-2 focus:ring-olivine">
+        </div>
+
+        <!-- Company Name -->
+        <div>
+          <label for="company-name" class="block text-sm font-medium text-gray-700">Company Name</label>
+          <input type="text" id="company-name" name="company-name" value="ABC Corp" class="w-full px-4 py-2 mt-1 bg-gray-200 border rounded focus:outline-none focus:ring-2 focus:ring-olivine">
+        </div>
+
+        <!-- Company Description -->
+        <div>
+          <label for="company-description" class="block text-sm font-medium text-gray-700">Company Description</label>
+          <textarea id="company-description" name="company-description" rows="4" class="w-full px-4 py-2 mt-1 bg-gray-200 border rounded focus:outline-none focus:ring-2 focus:ring-olivine">Leading provider of tech solutions.</textarea>
+        </div>
+
+        <!-- Contact Number -->
+        <div>
+          <label for="contact" class="block text-sm font-medium text-gray-700">Contact Number</label>
+          <input type="text" id="contact" name="contact" value="+123 456 7890" class="w-full px-4 py-2 mt-1 bg-gray-200 border rounded focus:outline-none focus:ring-2 focus:ring-olivine">
+        </div>
+
+        <!-- Upload Company Logo -->
+        <div>
+          <label for="logo" class="block text-sm font-medium text-gray-700">Upload Company Logo</label>
+          <input type="file" id="logo" name="logo" class="w-full px-4 py-2 mt-1 bg-gray-200 border rounded focus:outline-none focus:ring-2 focus:ring-olivine">
+        </div>
+
+        <!-- Change Password -->
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">New Password</label>
+          <input type="password" id="password" name="password" class="w-full px-4 py-2 mt-1 bg-gray-200 border rounded focus:outline-none focus:ring-2 focus:ring-olivine">
+        </div>
+
+        <!-- Save Changes Button -->
+        <div class="text-center">
+          <button type="submit" class="px-8 py-3 bg-olivine text-white font-semibold rounded-full hover:bg-light_green transition duration-200">Save Changes</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-asparagus py-6 text-center">
+    <p class="text-white">&copy; 2024 Job Portal. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
