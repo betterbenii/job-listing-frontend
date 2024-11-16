@@ -11,8 +11,10 @@
       <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" class="text-2xl font-bold text-light_green">Job Portal</a>
         <nav>
-          <a href="login.html" class="text-tea_green hover:text-olivine">Login</a>
-          <a href="signup.html" class="ml-4 text-tea_green hover:text-olivine">Sign Up</a>
+          <div class="space-x-2">
+            <a href="/signup.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Sign Up</a>
+            <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-asparagus">Login</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -31,11 +33,11 @@
       <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
         <!-- Job Card Example -->
         <div class="bg-tea_green p-6 rounded-lg shadow-md relative">
-          <h2 class="text-xl font-semibold text-olivine">Frontend Developer</h2>
-          <p class="text-sm text-asparagus">Company: ABC Corp</p>
-          <p class="text-sm text-asparagus">Location: Addis Ababa</p>
-          <p class="mt-2 text-gray-700">We are looking for a skilled frontend developer to join our team...</p>
-          <a href="job-detail.html" class="inline-block mt-4 text-olivine hover:underline">View Details</a>
+          <h2 class="text-xl font-semibold  text-asparagus-100">Frontend Developer</h2>
+          <p class="text-sm text-asparagus-200">Company: ABC Corp</p>
+          <p class="text-sm text-asparagus-200">Location: Addis Ababa</p>
+          <p class="mt-2 text-asparagus-100">We are looking for a skilled frontend developer to join our team...</p>
+          <a href="job-detail.html" class="inline-block mt-4 text-asparagus-100 hover:underline">View Details</a>
           
           <!-- Bookmark Button -->
           <button class="absolute bottom-4 right-4 text-olivine hover:text-asparagus" onclick="bookmarkJob()">
