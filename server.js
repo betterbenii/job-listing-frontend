@@ -86,6 +86,12 @@ app.get('/apply-job.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'apply-job.html'));
 });
 
+//Route for the faq page
+app.get('/faq.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'faq.html'));
+});
+
+
 
 // Wildcard route to catch all other requests and display the 404 page
 app.get('*', (req, res) => {
