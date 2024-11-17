@@ -96,6 +96,11 @@ app.get('/candidate-dashboard.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'candidate-dashboard.html'));
 });
 
+// Route for the admin dashboard page
+app.get('/admin-dashboard.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'admin-dashboard.html'));
+});
+
 
 // Wildcard route to catch all other requests and display the 404 page
 app.get('*', (req, res) => {

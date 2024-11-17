@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-tea_green-100">
+
+  <!-- Header -->
+  <header class="bg-asparagus shadow sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="/" class="text-2xl font-bold text-light_green">Admin Dashboard</a>
+      <a href="/login.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-light_green">Logout</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12 space-y-12">
+    
+    <!-- Dashboard Header -->
+    <section class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-asparagus">Welcome, Admin!</h2>
+      <p class="text-olivine">Manage recruiters, candidates, view reports, and monitor system activities.</p>
+    </section>
+
+    <!-- Dashboard Stats Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h4 class="text-xl font-bold text-asparagus">Total Jobs Posted</h4>
+        <p class="text-3xl font-semibold text-light_green">125</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h4 class="text-xl font-bold text-asparagus">Active Recruiters</h4>
+        <p class="text-3xl font-semibold text-light_green">34</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h4 class="text-xl font-bold text-asparagus">Registered Candidates</h4>
+        <p class="text-3xl font-semibold text-light_green">410</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h4 class="text-xl font-bold text-asparagus">Open Applications</h4>
+        <p class="text-3xl font-semibold text-light_green">78</p>
+      </div>
+    </section>
+
+    <!-- Analytics Section with Line Graph -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold text-asparagus mb-6">Analytics Overview</h3>
+      <div class="relative w-full max-w-3xl mx-auto h-64">
+        <canvas id="lineChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Notifications and User Management -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold text-asparagus mb-6">System Notifications</h3>
+      <ul class="list-disc pl-5 space-y-3">
+        <li>New recruiter registered: <a href="/recruiter-profile.html" class="text-olivine hover:underline">John Doe</a></li>
+        <li>New candidate registered: <a href="/candidate-profile.html" class="text-olivine hover:underline">Jane Smith</a></li>
+        <li>Job posting approved: Fullstack Developer at XYZ Corp</li>
+      </ul>
+    </section>
+
+    <!-- User Activity Log Table -->
+    <section class="bg-white p-6 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold text-asparagus mb-8">Activity Log</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto">
+          <thead>
+            <tr class="bg-asparagus text-white">
+              <th class="p-4 text-left">Name</th>
+              <th class="p-4 text-left">Role</th>
+              <th class="p-4 text-left">Action</th>
+              <th class="p-4 text-left">Date</th>
+              <th class="p-4 text-left">Status</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr class="hover:bg-gray-100">
+              <td class="p-4"><a href="/candidate-profile.html" class="text-olivine hover:underline">Jane Smith</a></td>
+              <td class="p-4">Candidate</td>
+              <td class="p-4">Updated Resume</td>
+              <td class="p-4">Nov 19, 2024</td>
+              <td class="p-4 text-green-600">Success</td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="p-4"><a href="/recruiter-profile.html" class="text-olivine hover:underline">John Doe</a></td>
+              <td class="p-4">Recruiter</td>
+              <td class="p-4">Deleted Job Post</td>
+              <td class="p-4">Nov 18, 2024</td>
+              <td class="p-4 text-red-600">Failed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-asparagus py-6 text-center">
+    <p class="text-white">&copy; 2024 Job Portal. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Chart.js -->
+  <script>
+    const ctx = document.getElementById('lineChart').getContext('2d');
+    const lineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [
+          {
+            label: 'Job Posts',
+            data: [10, 25, 18, 35, 28, 40, 50, 48, 55, 60, 72, 85],
+            borderColor: '#8FA382',
+            tension: 0.3
+          },
+          {
+            label: 'Applications',
+            data: [15, 18, 24, 20, 30, 38, 45, 50, 53, 68, 75, 80],
+            borderColor: '#F3B6C4',
+            tension: 0.3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'top' }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Months' } },
+          y: { beginAtZero: true, title: { display: true, text: 'Count' } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
