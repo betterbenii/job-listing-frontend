@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Dashboard</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-tea_green-100">
+
+  <!-- Header -->
+  <header class="bg-asparagus shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-xl sm:text-2xl font-bold text-light_green">Job Portal</a>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
+        <a href="#notifications" class="text-tea_green hover:text-olivine">Notifications</a>
+        <a href="#profile" class="text-tea_green hover:text-olivine">Profile</a>
+      </nav>
+      <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">Logout</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-12">
+    <!-- Candidate Welcome Section -->
+    <section class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-asparagus">Welcome, Candidate!</h2>
+      <p class="text-gray-700 mt-2">Here's a quick summary of your job applications and bookmarks.</p>
+    </section>
+  
+    <!-- Applied Jobs Section -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-asparagus mb-6">Applied Jobs</h3>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+        <!-- Applied Job Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Frontend Developer</h4>
+          <p class="text-gray-600">Company: ABC Corp</p>
+          <p class="text-gray-500 mt-2">Status: Under Review</p>
+          <div class="mt-4 flex justify-between items-center">
+            <a href="/job-detail.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-light_green">View Job</a>
+            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Withdraw</button>
+          </div>
+        </div>
+  
+        <!-- Additional Job Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Backend Developer</h4>
+          <p class="text-gray-600">Company: XYZ Ltd</p>
+          <div class="mt-4 flex justify-between items-center">
+            <a href="/job-detail.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-light_green">View Job</a>
+            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Remove</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Bookmarked Jobs Section -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-asparagus mb-6">Bookmarked Jobs</h3>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Fullstack Developer</h4>
+          <p class="text-gray-600">Company: DEF Inc</p>
+          <div class="mt-4 flex justify-between items-center">
+            <a href="/job-detail.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-light_green">View Job</a>
+            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Remove</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Notifications Section -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-asparagus mb-6">Notifications</h3>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <ul class="list-disc pl-5 text-gray-700">
+          <li>New job posted: Fullstack Developer at ABC Corp</li>
+          <li>Application status updated: Frontend Developer at XYZ Ltd</li>
+          <li>Message from recruiter: Interview scheduled</li>
+        </ul>
+      </div>
+    </section>
+  
+    <!-- Profile Section -->
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-asparagus mb-6">Your Profile</h3>
+      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+        <p class="text-gray-700">Name: John Doe</p>
+        <p class="text-gray-700">Email: johndoe@example.com</p>
+        <button onclick="location.href='/edit-candidate.html'" class="mt-6 px-6 py-3 bg-olivine text-white rounded hover:bg-light_green">Edit Profile</button>
+      </div>
+    </section>
+  </main>
+  
+
+  <!-- Footer -->
+  <footer class="bg-asparagus py-6 text-center">
+    <p class="text-white">&copy; 2024 Job Portal. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

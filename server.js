@@ -91,6 +91,10 @@ app.get('/faq.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'faq.html'));
 });
 
+// Route for candidate dashboard
+app.get('/candidate-dashboard.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'candidate-dashboard.html'));
+});
 
 
 // Wildcard route to catch all other requests and display the 404 page
