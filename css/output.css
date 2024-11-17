@@ -1157,6 +1157,11 @@ video {
   color: rgb(83 127 72 / var(--tw-text-opacity));
 }
 
+.text-olivine-400 {
+  --tw-text-opacity: 1;
+  color: rgb(112 167 98 / var(--tw-text-opacity));
+}
+
 .text-olivine-500 {
   --tw-text-opacity: 1;
   color: rgb(150 190 140 / var(--tw-text-opacity));
@@ -1292,6 +1297,11 @@ video {
 .hover\:text-asparagus:hover {
   --tw-text-opacity: 1;
   color: rgb(98 148 96 / var(--tw-text-opacity));
+}
+
+.hover\:text-asparagus-100:hover {
+  --tw-text-opacity: 1;
+  color: rgb(20 30 19 / var(--tw-text-opacity));
 }
 
 .hover\:text-olivine:hover {
