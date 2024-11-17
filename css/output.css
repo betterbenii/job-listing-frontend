@@ -1220,6 +1220,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-olivine {
+  --tw-shadow-color: #96be8c;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
