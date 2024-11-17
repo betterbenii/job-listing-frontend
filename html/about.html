@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Job Portal</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="bg-tea_green-100">
+
+  <!-- Header -->
+  <header class="bg-asparagus shadow sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-xl sm:text-2xl font-bold text-light_green">Job Portal</a>
+      <button id="menu-toggle" class="block md:hidden text-light_green focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <nav id="menu" class="hidden md:flex items-center space-x-4">
+        <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
+        <a href="#about" class="text-tea_green hover:text-olivine">About</a>
+        <a href="#contact" class="text-tea_green hover:text-olivine">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-asparagus text-white py-16 text-center">
+    <h1 class="text-4xl font-bold">Connecting Talent with Opportunity</h1>
+    <p class="mt-4 text-lg">Our mission is to bridge the gap between skilled candidates and top companies.</p>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section class="container mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-asparagus mb-8 text-center">Who We Are</h2>
+    <p class="text-gray-700 text-lg leading-relaxed text-center">
+      We are a team dedicated to simplifying the job search and hiring process. Our platform connects talented
+      individuals with leading companies, helping you find the perfect match for your career or business needs.
+    </p>
+  </section>
+
+  <!-- Our Mission Section -->
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-asparagus mb-8 text-center">Our Mission</h2>
+      <p class="text-gray-700 text-lg leading-relaxed text-center">
+        Our mission is to provide a seamless, efficient, and user-friendly job portal where candidates and recruiters can
+        connect, interact, and achieve their goals. Whether you’re a job seeker looking for your next opportunity or a
+        recruiter searching for top talent, we’ve got you covered.
+      </p>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="container mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-asparagus mb-8 text-center">How It Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-olivine text-white p-6 rounded-lg">
+        <h3 class="text-xl font-semibold">For Candidates</h3>
+        <p class="mt-4">Browse jobs, apply, and get hired! Create your profile to stand out.</p>
+      </div>
+      <div class="bg-olivine text-white p-6 rounded-lg">
+        <h3 class="text-xl font-semibold">For Recruiters</h3>
+        <p class="mt-4">Post job listings, review applications, and find the best talent for your team.</p>
+      </div>
+      <div class="bg-olivine text-white p-6 rounded-lg">
+        <h3 class="text-xl font-semibold">Easy Application Process</h3>
+        <p class="mt-4">Our platform ensures a smooth experience for both job seekers and recruiters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="bg-tea_green-100 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>
+      <ul class="list-disc list-inside text-olivine-500 text-lg">
+        <li>Advanced job search filters</li>
+        <li>Profile creation with resume uploads</li>
+        <li>Real-time notifications</li>
+        <li>Efficient dashboard for recruiters</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="container mx-auto px-4 py-12 bg-white rounded-lg shadow-lg">
+    <h2 class="text-3xl font-bold text-asparagus mb-8 text-center">Have Questions? Get in Touch!</h2>
+    <form class="space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-600">Name</label>
+        <input type="text" id="name" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-asparagus">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
+        <input type="email" id="email" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-asparagus">
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-600">Message</label>
+        <textarea id="message" rows="4" class="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-asparagus"></textarea>
+      </div>
+      <button type="submit" class="w-full py-3 bg-olivine text-white font-bold rounded hover:bg-asparagus">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-asparagus py-6 text-center">
+    <p class="text-white">&copy; 2024 Job Portal. All Rights Reserved.</p>
+    <nav class="mt-4 space-x-4">
+      <a href="#about" class="text-gray-200 hover:text-white">About</a> |
+      <a href="#privacy" class="text-gray-200 hover:text-white">Privacy</a> |
+      <a href="#contact" class="text-gray-200 hover:text-white">Contact</a> |
+      <a href="#faq" class="text-gray-200 hover:text-white">FAQ</a>
+    </nav>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>

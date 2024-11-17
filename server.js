@@ -71,6 +71,12 @@ app.get('/recruiter-dashboard.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'recruiter-dashboard.html'));
 });
 
+//route for about us page
+app.get('/about.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'about.html'));
+});
+
+
 // Wildcard route to catch all other requests and display the 404 page
 app.get('*', (req, res) => {
   res.status(404).sendFile(path.join(__dirname, 'html', '404.html'));
