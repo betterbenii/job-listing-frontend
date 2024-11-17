@@ -76,6 +76,10 @@ app.get('/about.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'about.html'));
 });
 
+// Route for contact us page
+app.get('/contact.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'contact.html'));
+});
 
 // Wildcard route to catch all other requests and display the 404 page
 app.get('*', (req, res) => {
