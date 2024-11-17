@@ -620,9 +620,19 @@ video {
   z-index: 50;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .mb-12 {
@@ -1107,6 +1117,16 @@ video {
   color: rgb(39 59 39 / var(--tw-text-opacity));
 }
 
+.text-asparagus-300 {
+  --tw-text-opacity: 1;
+  color: rgb(59 89 58 / var(--tw-text-opacity));
+}
+
+.text-asparagus-500 {
+  --tw-text-opacity: 1;
+  color: rgb(98 148 96 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1115,11 +1135,6 @@ video {
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -1225,6 +1240,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-asparagus-400 {
+  --tw-shadow-color: #4f764d;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .shadow-olivine {
   --tw-shadow-color: #96be8c;
   --tw-shadow: var(--tw-shadow-colored);
@@ -1282,6 +1302,11 @@ video {
 .hover\:bg-red-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-tea_green:hover {

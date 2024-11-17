@@ -16,14 +16,14 @@
       <nav class="hidden md:flex items-center space-x-4">
         <a href="/job-listings.html" class="text-tea_green hover:text-olivine">Jobs</a>
         <a href="#notifications" class="text-tea_green hover:text-olivine">Notifications</a>
-        <a href="#profile" class="text-tea_green hover:text-olivine">Profile</a>
+        <a href="candidate-profile.html" class="text-tea_green hover:text-olivine">Profile</a>
       </nav>
-      <a href="/login.html" class="px-4 py-2 bg-olivine text-white font-semibold rounded hover:bg-light_green">Logout</a>
+      <a href="/" class="px-4 py-2 bg-asparagus text-white font-semibold rounded hover:bg-olivine">Logout</a>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="container mx-auto px-6 py-12">
+  <main class="container text-left mx-auto px-6 py-12">
     <!-- Candidate Welcome Section -->
     <section class="text-center mb-12">
       <h2 class="text-4xl font-bold text-asparagus">Welcome, Candidate!</h2>
@@ -35,23 +35,24 @@
       <h3 class="text-2xl font-bold text-asparagus mb-6">Applied Jobs</h3>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         <!-- Applied Job Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+        <div class="bg-white p-6 rounded-lg shadow-md shadow-asparagus-400 flex flex-col justify-between">
           <h4 class="text-xl font-semibold text-gray-800">Frontend Developer</h4>
-          <p class="text-gray-600">Company: ABC Corp</p>
-          <p class="text-gray-500 mt-2">Status: Under Review</p>
-          <div class="mt-4 flex justify-between items-center">
-            <a href="/job-detail.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-light_green">View Job</a>
-            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Withdraw</button>
+          <p class="text-gray-600">Company: XYZ Ltd</p>
+          <p class="text-asparagus-500">Status: applied</p>
+          <div class="mt-4 flex justify-between  items-center">
+            <button onclick="location.href='/job-detail.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">View</button>
+            <button class="px-4 py-2 mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-red-700 hover:text-white">Remove</button>
           </div>
         </div>
   
         <!-- Additional Job Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
+        <div class="bg-white p-6 rounded-lg shadow-md shadow-asparagus-400 flex flex-col justify-between">
           <h4 class="text-xl font-semibold text-gray-800">Backend Developer</h4>
           <p class="text-gray-600">Company: XYZ Ltd</p>
-          <div class="mt-4 flex justify-between items-center">
-            <a href="/job-detail.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-light_green">View Job</a>
-            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Remove</button>
+          <p class="text-asparagus-500">Status: applied</p>
+          <div class="mt-4 flex justify-between  items-center">
+            <button onclick="location.href='/job-detail.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">View</button>
+            <button class="px-4 py-2 mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-red-700 hover:text-white">Remove</button>
           </div>
         </div>
       </div>
@@ -61,37 +62,67 @@
     <section class="mb-12">
       <h3 class="text-2xl font-bold text-asparagus mb-6">Bookmarked Jobs</h3>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
-          <h4 class="text-xl font-semibold text-gray-800">Fullstack Developer</h4>
-          <p class="text-gray-600">Company: DEF Inc</p>
-          <div class="mt-4 flex justify-between items-center">
-            <a href="/job-detail.html" class="px-4 py-2 bg-olivine text-white rounded hover:bg-light_green">View Job</a>
-            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Remove</button>
+        <!-- Applied Job Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md shadow-asparagus-400 flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Marketing Specialist</h4>
+          <p class="text-gray-600">Company: XYZ Ltd</p>
+          <p class="text-asparagus-500">Status: bookmarked</p>
+          <div class="mt-4 flex justify-between  items-center">
+            <button onclick="location.href='/job-detail.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">View</button>
+            <button class="px-4 py-2 mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-red-700 hover:text-white">Remove</button>
+          </div>
+        </div>
+  
+        <!-- Additional Job Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md shadow-asparagus-400 flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Senior Accountant</h4>
+          <p class="text-gray-600">Company: XYZ Ltd</p>
+          <p class="text-asparagus-500">Status: bookmarked</p>
+          <div class="mt-4 flex justify-between  items-center">
+            <button onclick="location.href='/job-detail.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">View</button>
+            <button class="px-4 py-2 mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-red-700 hover:text-white">Remove</button>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md shadow-asparagus-400 flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Content Creator</h4>
+          <p class="text-gray-600">Company: XYZ Ltd</p>
+          <p class="text-asparagus-500">Status: bookmarked</p>
+          <div class="mt-4 flex justify-between  items-center">
+            <button onclick="location.href='/job-detail.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">View</button>
+            <button class="px-4 py-2 mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-red-700 hover:text-white">Remove</button>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md shadow-asparagus-400 flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Camera Man</h4>
+          <p class="text-gray-600">Company: XYZ Ltd</p>
+          <p class="text-asparagus-500">Status: bookmarked</p>
+          <div class="mt-4 flex justify-between  items-center">
+            <button onclick="location.href='/job-detail.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">View</button>
+            <button class="px-4 py-2 mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-red-700 hover:text-white">Remove</button>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md shadow-asparagus-400 flex flex-col justify-between">
+          <h4 class="text-xl font-semibold text-gray-800">Data Scientist</h4>
+          <p class="text-gray-600">Company: XYZ Ltd</p>
+          <p class="text-asparagus-500">Status: bookmarked</p>
+          <div class="mt-4 flex justify-between  items-center">
+            <button onclick="location.href='/job-detail.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">View</button>
+            <button class="px-4 py-2 mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-red-700 hover:text-white">Remove</button>
           </div>
         </div>
       </div>
     </section>
   
-    <!-- Notifications Section -->
-    <section class="mb-12">
-      <h3 class="text-2xl font-bold text-asparagus mb-6">Notifications</h3>
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>New job posted: Fullstack Developer at ABC Corp</li>
-          <li>Application status updated: Frontend Developer at XYZ Ltd</li>
-          <li>Message from recruiter: Interview scheduled</li>
-        </ul>
-      </div>
-    </section>
   
+
     <!-- Profile Section -->
     <section class="mb-12">
-      <h3 class="text-2xl font-bold text-asparagus mb-6">Your Profile</h3>
-      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
-        <p class="text-gray-700">Name: John Doe</p>
-        <p class="text-gray-700">Email: johndoe@example.com</p>
-        <button onclick="location.href='/edit-candidate-profile.html'" class="mt-6 px-6 py-3 bg-olivine text-white rounded hover:bg-light_green">Edit Profile</button>
-      </div>
+      
+        <button onclick="location.href='/edit-candidate-profile.html'" class="px-4 py-2  mx-3 my-3 bg-asparagus text-white font-semibold rounded hover:bg-tea_green hover:text-asparagus-100">Edit Profile</button>
+     
     </section>
   </main>
   
