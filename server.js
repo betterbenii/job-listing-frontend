@@ -81,6 +81,12 @@ app.get('/contact.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'contact.html'));
 });
 
+// Route for the job application form
+app.get('/apply-job.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'html', 'apply-job.html'));
+});
+
+
 // Wildcard route to catch all other requests and display the 404 page
 app.get('*', (req, res) => {
   res.status(404).sendFile(path.join(__dirname, 'html', '404.html'));
