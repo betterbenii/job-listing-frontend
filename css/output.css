@@ -1167,11 +1167,6 @@ video {
   color: rgb(112 167 98 / var(--tw-text-opacity));
 }
 
-.text-olivine-500 {
-  --tw-text-opacity: 1;
-  color: rgb(150 190 140 / var(--tw-text-opacity));
-}
-
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
